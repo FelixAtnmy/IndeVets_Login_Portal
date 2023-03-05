@@ -1,0 +1,88 @@
+print("Welcome to IndeVets Login Portal!")
+
+# Prompt user for input
+username = input("Enter your desired username: ")
+password = input("Enter your desired password: ")
+
+# Create user account
+print("Creating account...")
+print("Username:", username)
+print("Password:", password)
+
+# Set account balance to 0
+account_balance = 0
+
+print("Account created successfully!")
+
+
+# Login user
+print("Logging in...")
+login_username = input("Please enter your username: ")
+login_password = input("Please enter your password: ")
+
+# Check if username and password are correct
+if login_username == username and login_password == password:
+    print("Login successful!")
+    print("\nWelcome,", username, "to your IndeVets Portal")
+    print("Please select an option from the list below:")
+
+
+
+
+    # Dashboard options
+    #dashboard = print(" 1. Contract Option 1: Rolesville Veterinary Hospital ~ $10,000 for 1 month. \n 2. Contract Option 2: Virginia Veterinary Centers ~ $50,000 for 6 months. \n 3. Contract Option 3: Philadelphia Animal Hospital ~ $110,000 for 1 year. \n 4. See account balance. \n 5. How many States is IndeVets practicing in? \n 6. What organizations and affiliates are partnered with IndeVets? \n 7. Quit")
+    #print("2. Contract Option 2: Virginia Veterinary Centers ~ $50,000 for 6 months.")
+    #print("3. Contract Option 3: Philadelphia Animal Hospital ~ $110,000 for 1 year.")
+    #print("4. See account balance.")
+    #print("5. How many States is IndeVets practicing in?")
+    #print("6. What organizations and affiliates are partnered with IndeVets?")
+    #print("7. Quit")
+
+
+
+#Dashboard options to select contract, view company information, etc.
+    while True:
+        dashboard = print(
+        " 1. Contract Option 1: Rolesville Veterinary Hospital ~ $10,000 for 1 month. \n 2. Contract Option 2: Virginia Veterinary Centers ~ $50,000 for 6 months. \n 3. Contract Option 3: Philadelphia Animal Hospital ~ $110,000 for 1 year. \n 4. See account balance. \n 5. IndeVets Benefits \n 6. How many States is IndeVets practicing in? \n 7. What organizations and affiliates are partnered with IndeVets? \n 8. About Us \n 9. Quit \n")
+        option_choice = str(input("Please enter option 1-9: "))
+        if option_choice == str(1):
+            print("Your 1 month contract starts next Monday at Rolesville Veterinary Hospital in Rolesville, NC. It will be 30 days M-F 7:30am-5:30pm EST.")
+            print("$10,000 has been deposited into your account. \n")
+            amount = float(10000)
+            account_balance += amount
+            dashboard
+        elif option_choice == str(2):
+            print("Your 6 month contract with Virginia Veterinary Centers starts on the 1st Monday of next month in Richmond, VA! Hours may vary as they are open 24/7. If you have a preference, please contact HR at hr@indevets.com.")
+            print("$50,000 has been deposited into your account. \n")
+            amount = float(50000)
+            account_balance += amount
+            dashboard
+        elif option_choice == str(3):
+            print("Your 1 year contract will with Philadelphia Animal Hospital will start on the 1st Monday of next month in Philadelphia, PA. Hours vary between 9am-8pm EST. If you have a preference, please contact HR at hr@indevets.com.")
+            print("$110,000 has been deposited into your account. \n")
+            amount = float(110000)
+            account_balance += amount
+            dashboard
+        elif option_choice == str(4):
+            print("Your current account balance is: ")
+            print(account_balance)
+            dashboard
+        elif option_choice == str(5):
+            print("\nIndeVets Benefits are extremely important to ensure each of our Vets are practicing a healthy work-life balance. \n Here is a list of the benefits below: \n - A variety of medical insurance options, including two that are fully paid by IndeVets (Yes, free to you!) \n - Dental and Vision Insurance \n - Company-Paid Short-Term Disability Insurance \n - Generous Paid-Time Off \n - Parental Leave \n - Continuing Education Allowance \n - License Reimbursement \n - 401(k) and Roth 401(k) contribution with 100% employer match up to the first 4% with no vesting period \n - Company-Paid Professional Liability Insurance \n - Membership Perks: deeply discounted memberships to VIN, VETgirl, Fear Free certification, and more! \n - Guilt-free leave of absences \n")
+        elif option_choice == str(6):
+            print("Currently we are practicing in 32 states! \n")
+        elif option_choice == str(7):
+            print(" - RACE \n - FEAR FREE \n - VETgirl \n - vetsource \n - wedgewood pharmacy \n - VIN \n - Plumb's \n - Strategic dvm Alliance \n IndeVets is very greatful for its partners! To learn more, please check out our website at https://indevets.com/! \n")
+            dashboard
+        elif option_choice == str(8):
+            print("\nIndeVets was founded in 2017 by: \n - Michael Raphael and Dr. Andrew Heller \nThe first hires were all Veterinarians as they believed the best way to run IndeVets was to work with professionals already in the field. \nThe IndeVets mission is to bring balance, fulfillment, and joy to veterinary medicine. \n \nThey believe in policies like: \n - Family Time \n - Doing the type of work you love \n - Peer Support \n - Flexible Scheduling \n Michael and Andrew found many people were experiencing burnout in the Veterinarian field and wanted to promote a healthier work-life balance in the field. \n \nToday, IndeVets currently has: \n - 200+ Vets on staff \n - 3000+ great hospitals across 32 states and growing \n - 500k Total Hours Worked by IndeVets thus far \n \nDue to company growth, IndeVets is looking to bring on: \n - 30 more HR Employees \n - 160 more Veterinarians \n")
+        elif option_choice == str(9):
+            print("Thank you", login_username, "for using your IndeVets Login Portal!")
+            break
+        else:
+            print("Please choose a valid choice. \n")
+            dashboard
+
+#If username or password does not match, the app breaks
+else:
+    print("Login failed. Incorrect username or password.")
